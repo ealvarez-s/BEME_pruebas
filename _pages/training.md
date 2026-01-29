@@ -38,10 +38,10 @@ author_profile: true
 | 2025|   06 al 17 de octubre    | [Tutoriales intermedios 2025](https://intercoonecta.github.io/tutorialesintermedios2025.html)| HACKATONES 2023-2025 | CSIC+AECID|
 | 2025 |  24 al 28 de noviembre     |[Hackaton 2025](https://github.com/Intercoonecta/Intercoonecta.github.io/blob/main/sitio/ohw2025.md)|HACKATONES 2023-2025| CSIC+AECID|
 
-**Introduccición a git+GitHub** en el COB:
-[materials](https://github.com/ealvarez-s/learning_Git)
-[videotutorial day 1](https://youtu.be/swPjq384nA0)
-[videotutorial day 2](https://youtu.be/swPjq384nA0)
+**Introduccición a git+GitHub** en el COG:
+- [materials](https://github.com/ealvarez-s/learning_Git)
+- [videotutorial day 1](https://youtu.be/swPjq384nA0)
+- [videotutorial day 2](https://youtu.be/swPjq384nA0)
 
 ##  Past members
 
