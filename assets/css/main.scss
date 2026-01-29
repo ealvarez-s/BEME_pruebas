@@ -37,3 +37,20 @@
 @import "vendor/font-awesome/font-awesome";
 @import "vendor/magnific-popup/magnific-popup";
 @import "print";
+
+/* === Perfiles de miembros === */
+
+.member-header {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.member-photo {
+  width: 160px;
+  border-radius: 50%;
+}
+
+.member-social li {
+  margin-right: 1rem;
+}

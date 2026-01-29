@@ -3,17 +3,100 @@ layout: default
 ---
 
 <div class="member-profile">
-  <img src="{{ page.photo }}" alt="{{ page.name }}" class="member-photo">
 
-  <h1>{{ page.name }}</h1>
-  <h3>{{ page.role }}</h3>
+  <!-- Cabecera -->
+  <div class="member-header">
+    <img src="{{ page.photo }}" alt="{{ page.name }}" class="member-photo">
 
-  <p>
-    📧 <a href="mailto:{{ page.email }}">{{ page.email }}</a><br>
-    📞 {{ page.phone }}
-  </p>
+    <div>
+      <h1>{{ page.name }}</h1>
+      <p class="member-role">{{ page.role }}</p>
+      <p class="member-inst">{{ page.institution }}</p>
 
-  <div class="member-bio">
-    {{ content }}
+      <p>
+        {% if page.email %}
+          📧 <a href="mailto:{{ page.email }}">{{ page.email }}</a><br>
+        {% endif %}
+        {% if page.website %}
+          🌐 <a href="{{ page.website }}" target="_blank">{{ page.website }}</a>
+        {% endif %}
+      </p>
+    </div>
   </div>
+
+  <!-- Redes y perfiles académicos -->
+  {% if page.social %}
+  <section>
+    <h2>Perfiles</h2>
+    <ul class="member-social">
+      {% if page.social.github %}
+        <li><a href="https://github.com/{{ page.social.github }}">GitHub</a></li>
+      {% endif %}
+      {% if page.social.twitter %}
+        <li><a href="https://twitter.com/{{ page.social.twitter }}">Twitter</a></li>
+      {% endif %}
+      {% if page.social.linkedin %}
+        <li><a href="https://linkedin.com/in/{{ page.social.linkedin }}">LinkedIn</a></li>
+      {% endif %}
+      {% if page.social.scholar %}
+        <li><a href="{{ page.social.scholar }}">Google Scholar</a></li>
+      {% endif %}
+      {% if page.social.orcid %}
+        <li><a href="https://orcid.org/{{ page.social.orcid }}">ORCID</a></li>
+      {% endif %}
+    </ul>
+  </section>
+  {% endif %}
+
+  <!-- Bio -->
+  <section>
+    <h2>Biografía</h2>
+    {{ content }}
+  </section>
+
+  <!-- Intereses -->
+  {% if page.interests %}
+  <section>
+    <h2>Intereses de investigación</h2>
+    <ul>
+      {% for interest in page.interests %}
+        <li>{{ interest }}</li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  <!-- Publicaciones -->
+  {% if page.publications %}
+  <section>
+    <h2>Publicaciones seleccionadas</h2>
+    <ul class="member-pubs">
+      {% for pub in page.publications %}
+        <li>
+          <strong>{{ pub.title }}</strong><br>
+          {{ pub.authors }} ({{ pub.year }})<br>
+          <em>{{ pub.venue }}</em>
+          {% if pub.link %}
+            – <a href="{{ pub.link }}">enlace</a>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  <!-- Noticias -->
+  {% if page.news %}
+  <section>
+    <h2>Noticias recientes</h2>
+    <ul>
+      {% for item in page.news %}
+        <li>
+          <strong>{{ item.date }}</strong>: {{ item.text }}
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
 </div>
