@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+<div class="member-profile">
+  <img src="{{ page.photo }}" alt="{{ page.name }}" class="member-photo">
+
+  <h1>{{ page.name }}</h1>
+  <h3>{{ page.role }}</h3>
+
+  <p>
+    📧 <a href="mailto:{{ page.email }}">{{ page.email }}</a><br>
+    📞 {{ page.phone }}
+  </p>
+
+  <div class="member-bio">
+    {{ content }}
+  </div>
+</div>
