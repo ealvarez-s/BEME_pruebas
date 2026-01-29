@@ -1,10 +1,18 @@
 ---
 layout: member
-name: Pepito Pérez
+name: Pepe Pérez
 role: Investigador Principal
-email: pepito.perez@ejemplo.com
-phone: +34 600 123 456
+institution: Universidad Ejemplo
+email: juan.perez@ejemplo.com
+website: https://juanperez.com
 photo: /images/members/profile_pepito_perez.png
+
+social:
+  github: juanperez
+  twitter: juan_perez
+  linkedin: juan-perez
+  scholar: https://scholar.google.com/citations?user=XXXX
+  orcid: 0000-0002-1825-0097
 
 interests:
   - Inteligencia Artificial
@@ -22,13 +30,6 @@ publications:
     year: 2022
     venue: Conference XYZ
 
-social:
-  github: ealvarez-s
-  twitter: juan_perez
-  linkedin: juan-perez
-  scholar: https://scholar.google.es/citations?user=nD91FsMAAAAJ&hl=es
-  orcid: [0000-0002-6776-1029](https://orcid.org/0000-0002-6776-1029)
-
 news:
   - date: 2025-01-10
     text: "Nuevo proyecto financiado por el Ministerio."
@@ -36,5 +37,4 @@ news:
     text: "Charla invitada en la Universidad ABC."
 ---
 
-
-Pepe es investigador en el área de inteligencia artificial y sistemas distribuidos.
+Pepe es investigador en el área de inteligencia artificial, con especial interés en sistemas escalables y reproducibilidad científica.
